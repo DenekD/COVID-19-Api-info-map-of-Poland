@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/COVID-19-Api-info-map-of-Poland/precache-manifest.2c2078d49347ef72748106e7fcaeb186.js"
+  "/COVID-19-Api-info-map-of-Poland/precache-manifest.df0ae46f198aca23fe7ff7c08457e1bd.js"
 );
 
 self.addEventListener('message', (event) => {
