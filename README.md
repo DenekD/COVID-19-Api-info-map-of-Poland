@@ -1,4 +1,4 @@
-https://denekd.github.io/COVID-19-Api-info-map-of-Poland/
+run app: https://denekd.github.io/COVID-19-Api-info-map-of-Poland/
 
 App shows map with number of infected and deceased people in Poland</br>
 
