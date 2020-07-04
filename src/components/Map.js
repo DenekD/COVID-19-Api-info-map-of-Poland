@@ -166,6 +166,7 @@ export default class Mapa extends React.Component {
       <>
         <svg
           id="map"
+          viewBox="0 0 615 615"
           // width="612.75696"
           // height="577.23169"
           strokeWidth="3"

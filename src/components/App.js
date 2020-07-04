@@ -5,15 +5,12 @@ import axios from 'axios';
 import Table from './Table';
 import PopOver from './PopOver';
 
-
-
 class App extends React.Component {
   state = {
     deceased: 0,
     infected: 0,
     infectedByRegion: [{}],
   }
-
 
   componentDidMount() {
     this.performSearch()
@@ -35,25 +32,20 @@ class App extends React.Component {
 
   render() {
 
-
     return (
       <>
         <header>Covid 19 Poland</header>
         <div className="main">
-
           <div className="map">
             <PopOver
               data={this.state.infectedByRegion}
             />
           </div>
-
           <div className="table">
             <Table data={this.state.infectedByRegion} />
           </div>
         </div>
-
       </>
-
     );
   }
 }
