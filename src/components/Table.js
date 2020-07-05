@@ -22,7 +22,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
+      // backgroundColor: theme.palette.action.hover,
     },
   },
 }))(TableRow);
@@ -48,8 +48,8 @@ export default function CustomizedTables(props) {
         </TableHead>
         <TableBody>
           {props.data.map((row) => (
-            <StyledTableRow key={row.region}>
-              <StyledTableCell component="th" scope="row">
+            <StyledTableRow key={row.region} className="activeRow">
+              <StyledTableCell component="th" scope="row" >
                 {row.region}
               </StyledTableCell>
               <StyledTableCell align="right">{row.infectedCount}</StyledTableCell>

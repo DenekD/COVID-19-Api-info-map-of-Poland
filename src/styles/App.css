@@ -59,7 +59,6 @@ header {
  stroke: white;
 }
 
-
 .text {
   fill: black;
   font-weight: bold;
@@ -70,9 +69,6 @@ header {
 
 }
 
-
-
-
 .popup span {
   font-weight: bold;
   color: blue;
@@ -80,6 +76,10 @@ header {
 }
 
 
+/* .activeRow {
+  background: tomato !important;
+} */
 
-
-
+/* .tableRow :nth-last-of-type(odd){
+  background: tomato;
+} */
