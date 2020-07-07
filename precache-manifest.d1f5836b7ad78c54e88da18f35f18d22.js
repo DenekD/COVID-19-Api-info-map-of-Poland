@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "024465f9c383bb1272c3ffb8d532215b",
+    "revision": "bf77a20ed49b7dcd88352e51618fcdc5",
     "url": "/COVID-19-Api-info-map-of-Poland/index.html"
   },
   {
-    "revision": "de9ff97c8aa410409ca2",
-    "url": "/COVID-19-Api-info-map-of-Poland/static/css/main.ed0bca96.chunk.css"
+    "revision": "69577d50fef7276e63ab",
+    "url": "/COVID-19-Api-info-map-of-Poland/static/css/main.aa5828b8.chunk.css"
   },
   {
     "revision": "d4c9d15ba22b9a128822",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/COVID-19-Api-info-map-of-Poland/static/js/2.7e562f26.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de9ff97c8aa410409ca2",
+    "revision": "69577d50fef7276e63ab",
     "url": "/COVID-19-Api-info-map-of-Poland/static/js/main.6d54c953.chunk.js"
   },
   {

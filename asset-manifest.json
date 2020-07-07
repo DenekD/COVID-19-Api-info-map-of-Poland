@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/COVID-19-Api-info-map-of-Poland/static/css/main.ed0bca96.chunk.css",
+    "main.css": "/COVID-19-Api-info-map-of-Poland/static/css/main.aa5828b8.chunk.css",
     "main.js": "/COVID-19-Api-info-map-of-Poland/static/js/main.6d54c953.chunk.js",
     "main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/main.6d54c953.chunk.js.map",
     "runtime-main.js": "/COVID-19-Api-info-map-of-Poland/static/js/runtime-main.e500eac6.js",
@@ -8,15 +8,15 @@
     "static/js/2.7e562f26.chunk.js": "/COVID-19-Api-info-map-of-Poland/static/js/2.7e562f26.chunk.js",
     "static/js/2.7e562f26.chunk.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/2.7e562f26.chunk.js.map",
     "index.html": "/COVID-19-Api-info-map-of-Poland/index.html",
-    "precache-manifest.1bcc75dcca6d61c615b17e674c0a723f.js": "/COVID-19-Api-info-map-of-Poland/precache-manifest.1bcc75dcca6d61c615b17e674c0a723f.js",
+    "precache-manifest.d1f5836b7ad78c54e88da18f35f18d22.js": "/COVID-19-Api-info-map-of-Poland/precache-manifest.d1f5836b7ad78c54e88da18f35f18d22.js",
     "service-worker.js": "/COVID-19-Api-info-map-of-Poland/service-worker.js",
-    "static/css/main.ed0bca96.chunk.css.map": "/COVID-19-Api-info-map-of-Poland/static/css/main.ed0bca96.chunk.css.map",
+    "static/css/main.aa5828b8.chunk.css.map": "/COVID-19-Api-info-map-of-Poland/static/css/main.aa5828b8.chunk.css.map",
     "static/js/2.7e562f26.chunk.js.LICENSE.txt": "/COVID-19-Api-info-map-of-Poland/static/js/2.7e562f26.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e500eac6.js",
     "static/js/2.7e562f26.chunk.js",
-    "static/css/main.ed0bca96.chunk.css",
+    "static/css/main.aa5828b8.chunk.css",
     "static/js/main.6d54c953.chunk.js"
   ]
 }
