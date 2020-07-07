@@ -42,6 +42,7 @@ export default function MouseOverPopover(props) {
         hoveredRegion={setHoveredRegion}
         hoveredInfected={setHoveredInfected}
         hoveredDeceased={setHoveredDeceased}
+        setActiveRegion={props.setActiveRegion}
       />
       <Popover
         id="mouse-over-popover"

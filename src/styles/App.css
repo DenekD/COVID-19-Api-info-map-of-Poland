@@ -29,13 +29,10 @@ header {
   margin: 0 auto;
   background: white;
   height: calc(100vh - var(--head_size));
-
 }
  .map {
   position: relative;
   width: var(--mapDiv_Width);
-  /* padding-top: 20px; */
-
 }
 
 .table {
@@ -47,39 +44,33 @@ header {
   position: absolute;
   width: 80%;
   height: auto;
-  fill: #EDF6F8;
+  fill: lightseagreen;
   left: calc(var(--mapDiv_Width)*0.1);
-
-
+}
+.map g {
+  cursor: pointer;
+  transition: all 0.7s ease-in;
 }
 
 .map path {
- cursor: pointer;
- transition: all 0.3s ease-in;
  stroke: white;
 }
 
 .text {
-  fill: black;
+  fill: midnightblue;
   font-weight: bold;
+  font-size: 13px;
 }
 
-.map path:hover {
+.map g:hover {
   fill: #cbe8f0;
-
 }
 
 .popup span {
   font-weight: bold;
   color: blue;
-
 }
 
-
-/* .activeRow {
-  background: tomato !important;
-} */
-
-/* .tableRow :nth-last-of-type(odd){
-  background: tomato;
-} */
+.activeRow {
+  background: lightseagreen !important;
+}

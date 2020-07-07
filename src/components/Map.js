@@ -1,10 +1,7 @@
 import React from 'react';
 import regions from '../assets/svgData'
 
-
-
 export default class Mapa extends React.Component {
-
   state = {
     regions
   }
@@ -24,24 +21,24 @@ export default class Mapa extends React.Component {
 
   mouseOver = (e, region) => {
     const hoveredRegionData = this.props.data.filter(r => r.region.toLowerCase() === this.letersFormat(region.toLowerCase()));
-    // const deceased = this.props.data.filter(r => r.region.toLowerCase() === this.letersFormat(region.toLowerCase()))[0].deceasedCount;
-    // console.log(infected);
     this.props.onMouseEnter(e);
     this.props.hoveredRegion(region);
     this.props.hoveredInfected(hoveredRegionData[0].infectedCount);
     this.props.hoveredDeceased(hoveredRegionData[0].deceasedCount);
+    this.props.setActiveRegion(region)
   }
   MouseOut = (e) => {
     this.props.onMouseLeave(e);
+    this.props.setActiveRegion("")
   }
 
   render() {
     const map = this.state.regions.map(region => (
-      <g key={region.regionName}>
+      <g key={region.regionName}
+        onMouseOver={(e) => this.mouseOver(e, region.regionName)}
+        onMouseOut={(e) => this.MouseOut(e)}>
         <path
           id={region.regionName}
-          onMouseOver={(e) => this.mouseOver(e, region.regionName)}
-          onMouseOut={(e) => this.MouseOut(e)}
           d={region.d} />
         <text className="text" textAnchor="middle" x={region.mapTextOffset_X} y={region.mapTextOffset_Y}>
           {region.regionName}
@@ -51,11 +48,7 @@ export default class Mapa extends React.Component {
 
     return (
       <>
-        <svg
-          id="map"
-          viewBox="0 0 615 615"
-          strokeWidth="3"
-        >
+        <svg id="map" viewBox="0 0 615 615" strokeWidth="3">
           {map}
         </svg>
       </>

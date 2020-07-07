@@ -22,7 +22,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
-      // backgroundColor: theme.palette.action.hover,
+      backgroundColor: theme.palette.action.hover,
     },
   },
 }))(TableRow);
@@ -33,8 +33,22 @@ const useStyles = makeStyles({
   },
 });
 
+const letersFormat = (word) => {
+  word = word.replace("ę", "e");
+  word = word.replace("ó", "o");
+  word = word.replace("ą", "a");
+  word = word.replace("ś", "s");
+  word = word.replace("ł", "l");
+  word = word.replace("ż", "z");
+  word = word.replace("ź", "z");
+  word = word.replace("ć", "c");
+  word = word.replace("ń", "n");
+  return word;
+}
+
 export default function CustomizedTables(props) {
   const classes = useStyles();
+  const active = props.activeRegion;
 
   return (
     <TableContainer component={Paper}>
@@ -48,7 +62,10 @@ export default function CustomizedTables(props) {
         </TableHead>
         <TableBody>
           {props.data.map((row) => (
-            <StyledTableRow key={row.region} className="activeRow">
+            <StyledTableRow
+              key={row.region}
+              className={letersFormat(active.toLowerCase()) === row.region ? "activeRow" : ""}
+            >
               <StyledTableCell component="th" scope="row" >
                 {row.region}
               </StyledTableCell>

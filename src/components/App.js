@@ -1,5 +1,4 @@
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.css';
 import axios from 'axios';
 import Table from './Table';
@@ -7,9 +6,10 @@ import PopOver from './PopOver';
 
 class App extends React.Component {
   state = {
+    activeRegion: '',
     deceased: 0,
     infected: 0,
-    infectedByRegion: [{}],
+    infectedByRegion: [],
   }
 
   componentDidMount() {
@@ -30,8 +30,11 @@ class App extends React.Component {
       });
   }
 
-  render() {
+  handleSetActiveRegion = (region) => {
+    this.setState({ activeRegion: region })
+  }
 
+  render() {
     return (
       <>
         <header>Covid 19 Poland</header>
@@ -39,10 +42,13 @@ class App extends React.Component {
           <div className="map">
             <PopOver
               data={this.state.infectedByRegion}
+              setActiveRegion={this.handleSetActiveRegion}
             />
           </div>
           <div className="table">
-            <Table data={this.state.infectedByRegion} />
+            <Table
+              data={this.state.infectedByRegion}
+              activeRegion={this.state.activeRegion} />
           </div>
         </div>
       </>
