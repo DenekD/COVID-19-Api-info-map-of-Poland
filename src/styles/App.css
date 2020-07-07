@@ -23,23 +23,6 @@ header {
    max-height: var(--head_size);
 }
 
-.main {
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  background: white;
-  height: calc(100vh - var(--head_size));
-}
- .map {
-  position: relative;
-  width: var(--mapDiv_Width);
-}
-
-.table {
-  width: calc(100vw - var(--mapDiv_Width));
-  overflow: visible;
-}
-
 .map svg {
   position: absolute;
   width: 80%;
@@ -73,4 +56,42 @@ header {
 
 .activeRow {
   background: lightseagreen !important;
+}
+
+
+
+@media (max-width: 399px ) {
+  .main {
+    display: block;
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+    min-height: 300px;
+    background-color: #FFFFFF;
+    position: static;
+  }
+  .table {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (min-width: 400px ) {
+  .main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+    height: calc(100vh - var(--head_size));
+  }
+   .map {
+    position: relative;
+    width: var(--mapDiv_Width);
+  }
+
+  .table {
+    width: calc(100vw - var(--mapDiv_Width));
+    overflow: visible;
+  }
 }
