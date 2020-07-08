@@ -16,10 +16,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MouseOverPopover(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [hoveredRegion, setHoveredRegion] = React.useState(null);
-  const [hoveredInfected, setHoveredInfected] = React.useState(null);
-  const [hoveredDeceased, setHoveredDeceased] = React.useState(null);
-
+  const [hoveredRegion, setHoveredRegion] = React.useState({ region: '', infected: '', deceased: '' });
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -40,8 +37,6 @@ export default function MouseOverPopover(props) {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
         hoveredRegion={setHoveredRegion}
-        hoveredInfected={setHoveredInfected}
-        hoveredDeceased={setHoveredDeceased}
         setActiveRegion={props.setActiveRegion}
       />
       <Popover
@@ -53,7 +48,7 @@ export default function MouseOverPopover(props) {
         open={open}
         anchorEl={anchorEl}
         anchorOrigin={{
-          vertical: 'top',
+          vertical: 'center',
           horizontal: 'center',
         }}
         transformOrigin={{
@@ -65,9 +60,9 @@ export default function MouseOverPopover(props) {
       >
         <Typography component={'div'} variant={'body2'}>{(
           <div className="popup">
-            <p>województwo: <span>{hoveredRegion}</span></p>
-            <p>zarażeni: <span>{hoveredInfected}</span></p>
-            <p>ofiary smiertelne: <span>{hoveredDeceased}</span></p>
+            <p>województwo: <span>{hoveredRegion.region}</span></p>
+            <p>zarażeni: <span>{hoveredRegion.infected}</span></p>
+            <p>ofiary smiertelne: <span>{hoveredRegion.deceased}</span></p>
           </div>
         )}
         </Typography>

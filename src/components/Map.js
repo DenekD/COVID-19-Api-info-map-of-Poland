@@ -21,10 +21,13 @@ export default class Mapa extends React.Component {
 
   mouseOver = (e, region) => {
     const hoveredRegionData = this.props.data.filter(r => r.region.toLowerCase() === this.letersFormat(region.toLowerCase()));
+    const hoverRegion = {
+      region,
+      infected: hoveredRegionData[0].infectedCount,
+      deceased: hoveredRegionData[0].deceasedCount,
+    }
     this.props.onMouseEnter(e);
-    this.props.hoveredRegion(region);
-    this.props.hoveredInfected(hoveredRegionData[0].infectedCount);
-    this.props.hoveredDeceased(hoveredRegionData[0].deceasedCount);
+    this.props.hoveredRegion(hoverRegion);
     this.props.setActiveRegion(region)
   }
   MouseOut = (e) => {
