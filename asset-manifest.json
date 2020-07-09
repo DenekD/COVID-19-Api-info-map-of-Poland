@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/COVID-19-Api-info-map-of-Poland/static/css/main.d42aa647.chunk.css",
-    "main.js": "/COVID-19-Api-info-map-of-Poland/static/js/main.ec295787.chunk.js",
-    "main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/main.ec295787.chunk.js.map",
+    "main.css": "/COVID-19-Api-info-map-of-Poland/static/css/main.b54a18bb.chunk.css",
+    "main.js": "/COVID-19-Api-info-map-of-Poland/static/js/main.0ab7adaa.chunk.js",
+    "main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/main.0ab7adaa.chunk.js.map",
     "runtime-main.js": "/COVID-19-Api-info-map-of-Poland/static/js/runtime-main.e500eac6.js",
     "runtime-main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/runtime-main.e500eac6.js.map",
-    "static/js/2.0d5f0ea9.chunk.js": "/COVID-19-Api-info-map-of-Poland/static/js/2.0d5f0ea9.chunk.js",
-    "static/js/2.0d5f0ea9.chunk.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/2.0d5f0ea9.chunk.js.map",
+    "static/js/2.dcf2c141.chunk.js": "/COVID-19-Api-info-map-of-Poland/static/js/2.dcf2c141.chunk.js",
+    "static/js/2.dcf2c141.chunk.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/2.dcf2c141.chunk.js.map",
     "index.html": "/COVID-19-Api-info-map-of-Poland/index.html",
-    "precache-manifest.cc354537a050e24a3c927c0fe8bf965d.js": "/COVID-19-Api-info-map-of-Poland/precache-manifest.cc354537a050e24a3c927c0fe8bf965d.js",
+    "precache-manifest.64d6cf2fde0f7ffe2b5c7588de086de4.js": "/COVID-19-Api-info-map-of-Poland/precache-manifest.64d6cf2fde0f7ffe2b5c7588de086de4.js",
     "service-worker.js": "/COVID-19-Api-info-map-of-Poland/service-worker.js",
-    "static/css/main.d42aa647.chunk.css.map": "/COVID-19-Api-info-map-of-Poland/static/css/main.d42aa647.chunk.css.map",
-    "static/js/2.0d5f0ea9.chunk.js.LICENSE.txt": "/COVID-19-Api-info-map-of-Poland/static/js/2.0d5f0ea9.chunk.js.LICENSE.txt"
+    "static/css/main.b54a18bb.chunk.css.map": "/COVID-19-Api-info-map-of-Poland/static/css/main.b54a18bb.chunk.css.map",
+    "static/js/2.dcf2c141.chunk.js.LICENSE.txt": "/COVID-19-Api-info-map-of-Poland/static/js/2.dcf2c141.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e500eac6.js",
-    "static/js/2.0d5f0ea9.chunk.js",
-    "static/css/main.d42aa647.chunk.css",
-    "static/js/main.ec295787.chunk.js"
+    "static/js/2.dcf2c141.chunk.js",
+    "static/css/main.b54a18bb.chunk.css",
+    "static/js/main.0ab7adaa.chunk.js"
   ]
 }
