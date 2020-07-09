@@ -55,8 +55,9 @@ header {
 }
 
 .activeRow {
-  background: lightseagreen !important;
+  transition: all 0.2s ease-out
 }
+
 
 @media (max-width: 399px ) {
   .main {

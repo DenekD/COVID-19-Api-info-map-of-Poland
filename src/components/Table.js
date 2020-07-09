@@ -7,6 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import red from '@material-ui/core/colors/red';
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -23,6 +25,18 @@ const StyledTableRow = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.action.hover,
+    },
+    '&:nth-of-type(1)': {
+      backgroundColor: theme.palette.error.dark,
+    },
+    '&:nth-of-type(2)': {
+      backgroundColor: red[300],
+    },
+    '&:nth-of-type(3)': {
+      backgroundColor: red[100],
+    },
+    '&.activeRow': {
+      backgroundColor: theme.palette.warning.light,
     },
   },
 }))(TableRow);
@@ -48,7 +62,7 @@ export default function CustomizedTables(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.regions.map((row) => (
+          {props.regions.sort((a, b) => b.infected - a.infected).map((row) => (
             <StyledTableRow
               key={row.regionName}
               className={row.isHovered ? "activeRow" : null}
