@@ -33,22 +33,9 @@ const useStyles = makeStyles({
   },
 });
 
-const letersFormat = (word) => {
-  word = word.replace("ę", "e");
-  word = word.replace("ó", "o");
-  word = word.replace("ą", "a");
-  word = word.replace("ś", "s");
-  word = word.replace("ł", "l");
-  word = word.replace("ż", "z");
-  word = word.replace("ź", "z");
-  word = word.replace("ć", "c");
-  word = word.replace("ń", "n");
-  return word;
-}
 
 export default function CustomizedTables(props) {
   const classes = useStyles();
-  const active = props.activeRegion;
 
   return (
     <TableContainer component={Paper}>
@@ -61,16 +48,16 @@ export default function CustomizedTables(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.data.map((row) => (
+          {props.regions.map((row) => (
             <StyledTableRow
-              key={row.region}
-              className={letersFormat(active.toLowerCase()) === row.region ? "activeRow" : ""}
+              key={row.regionName}
+              className={row.isHovered ? "activeRow" : null}
             >
               <StyledTableCell component="th" scope="row" >
-                {row.region}
+                {row.regionName}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.infectedCount}</StyledTableCell>
-              <StyledTableCell align="right">{row.deceasedCount}</StyledTableCell>
+              <StyledTableCell align="right">{row.infected}</StyledTableCell>
+              <StyledTableCell align="right">{row.deceased}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

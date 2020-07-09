@@ -17,6 +17,7 @@ export default function MouseOverPopover(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [hoveredRegion, setHoveredRegion] = React.useState({ region: '', infected: '', deceased: '' });
+
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -33,11 +34,11 @@ export default function MouseOverPopover(props) {
         className="mapa"
         aria-owns={open ? 'mouse-over-popover' : undefined}
         aria-haspopup="true"
-        data={props.data}
+        regions={props.regions}
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
         hoveredRegion={setHoveredRegion}
-        setActiveRegion={props.setActiveRegion}
+        setMarkedRegion={props.setMarkedRegion}
       />
       <Popover
         id="mouse-over-popover"
