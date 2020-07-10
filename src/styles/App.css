@@ -27,26 +27,7 @@ header {
   position: absolute;
   width: 80%;
   height: auto;
-  fill: lightseagreen;
   left: calc(var(--mapDiv_Width)*0.1);
-}
-.map g {
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-}
-
-.map path {
- stroke: white;
-}
-
-.text {
-  fill: midnightblue;
-  font-weight: bold;
-  font-size: 13px;
-}
-
-.map g:hover {
-  fill: #cbe8f0;
 }
 
 .popup span {
