@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
+import { regionsLetterFormat } from '../assets/utility';
 import axios from 'axios';
 import Table from './Table';
 import PopOver from './PopOver';
@@ -12,18 +13,6 @@ class App extends React.Component {
     regions
   }
 
-  regionsLetterFormat = (word) => {
-    word = word.replace("ę", "e");
-    word = word.replace("ó", "o");
-    word = word.replace("ą", "a");
-    word = word.replace("ś", "s");
-    word = word.replace("ł", "l");
-    word = word.replace("ż", "z");
-    word = word.replace("ź", "z");
-    word = word.replace("ć", "c");
-    word = word.replace("ń", "n");
-    return word;
-  }
 
   componentDidMount() {
     this.performSearch()
@@ -36,7 +25,7 @@ class App extends React.Component {
           .map(i => {
             const states = this.state.regions
               .map(r => {
-                if (this.regionsLetterFormat(r.regionName.toLowerCase()) === i.region) {
+                if (regionsLetterFormat(r.regionName.toLowerCase()) === i.region) {
                   return {
                     ...r,
                     infected: i.infectedCount,
