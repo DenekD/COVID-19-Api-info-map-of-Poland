@@ -3,7 +3,8 @@ import '../styles/App.css';
 import axios from 'axios';
 import Table from './Table';
 import PopOver from './PopOver';
-import regions from '../assets/svgData'
+import regions from '../assets/svgData';
+import Header from './Header';
 
 
 class App extends React.Component {
@@ -74,7 +75,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <header>Covid 19 Poland</header>
+        <Header />
         <div className="main">
           <div className="map">
             <PopOver
