@@ -13,7 +13,6 @@ class App extends React.Component {
     regions
   }
 
-
   componentDidMount() {
     this.performSearch()
   }
