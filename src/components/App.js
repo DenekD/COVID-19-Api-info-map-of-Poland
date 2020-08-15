@@ -3,7 +3,7 @@ import '../styles/App.css';
 import { regionsLetterFormat } from '../assets/utility';
 import axios from 'axios';
 import Table from './Table';
-import PopOver from './PopOver';
+import MapContainer from './MapContainer';
 import regions from '../assets/svgData';
 import Header from './Header';
 
@@ -66,7 +66,7 @@ class App extends React.Component {
         <Header />
         <div className="main">
           <div className="map">
-            <PopOver
+            <MapContainer
               regions={this.state.regions}
               setMarkedRegion={this.handleMarkedRegion}
             />

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MouseOverPopover(props) {
+export default function MApContainer(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [hoveredRegion, setHoveredRegion] = React.useState({ region: '', infected: '', deceased: '' });
