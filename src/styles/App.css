@@ -24,7 +24,7 @@ header {
 }
 
 .map svg {
-  position: absolute;
+  position: relative;
   width: 80%;
   height: auto;
   left: calc(var(--mapDiv_Width)*0.1);
@@ -35,9 +35,51 @@ header {
   color: blue;
 }
 
+.map {
+  position: relative;
+}
+
+.poper {
+  font-size: 13px;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: firebrick;
+  padding: 20px;
+  border-radius: 5px;
+  top: 240px;
+  left: 420px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  box-shadow: 0 8px 6px -6px rgba(0,0,0, 0.4);
+}
+
+.poper.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.poper::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: inherit;
+  bottom: -10px;
+  left: 90px;
+  transform: rotate(45deg);
+
+}
+
+
+
 .activeRow {
   transition: all 0.2s ease-out
 }
+
+
 
 
 @media (max-width: 399px ) {

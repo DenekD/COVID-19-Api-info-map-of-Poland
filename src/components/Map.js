@@ -63,11 +63,15 @@ export default function Mapa(props) {
     </StyledSVGcontainer>
   ))
 
+
   return (
     <>
       <svg viewBox="0 0 615 615" >
         {map}
       </svg>
+      <div className={props.regions[1].isHovered ? 'poper on' : 'poper'}>
+        dupa
+      </div>
     </>
   )
 
