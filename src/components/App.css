@@ -1,0 +1,148 @@
+* {
+  margin:0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background: #277da1;
+  /* padding: 20px; */
+  flex-basis: 10%;
+  min-height: 75px;
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+
+}
+.mapa {
+  min-height: 300px;
+  background: #fff;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapa .mapContainer {
+  position: relative;
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+
+.mapa svg {
+  width: 100%;
+  height: auto;
+  max-height: 615px;
+}
+
+.mapa i {
+  font-size: 40px;
+  color: cadetblue;
+  animation: rotateIcon 1.2s linear infinite;
+}
+@keyframes rotateIcon {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+
+.popup {
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  padding: 20px ;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px -12px rgba(0, 0, 0, .8);
+  transform: translateX(-50%);
+  pointer-events: none;
+  text-align-last: left;
+}
+.popup::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color:#fff;
+}
+
+.popup span {
+  color: blue;
+}
+
+.table table{
+  border-collapse: collapse;
+  color: #0b132b;
+  height: 100%;
+
+}
+
+.table td, .table th {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+}
+
+.table td.tdRegionName {
+  text-align: left;
+}
+
+
+
+.table tbody tr:nth-child(even) {
+  background: #c0d6df;
+}
+.table tbody tr:nth-child(odd) {
+  background: #eaeaea;
+}
+
+.table tbody tr:nth-child(1){
+  background: #e70e02;
+}
+.table tbody tr:nth-child(2){
+  background: #d84a05;
+}
+.table tbody tr:nth-child(3){
+  background: #ec7505;
+}
+
+.table tr.select {
+  background: #09a6f3 !important;
+  color: #fff;
+}
+
+@media (max-width: 840px) {
+  .main {
+    flex-direction: column;
+
+  }
+
+  .table table {
+    width: 100%
+  }
+}

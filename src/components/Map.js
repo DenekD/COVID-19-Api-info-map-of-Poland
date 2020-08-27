@@ -1,23 +1,22 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-
 
 const StyledSVGcontainer = styled.g`
   fill: lightblue;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 
     &:nth-of-type(1) {
-    fill: #D32F2F;
+    fill: #e70e02;
     }
     &:nth-of-type(2) {
-    fill: #E57373;
+    fill: #d84a05;
     }
     &:nth-of-type(3) {
-    fill: #FFCDD2;
+    fill: #ec7505;
     }
     &:hover {
-      fill: #ffb74d;
+      fill: #09a6f3;
     }
     & path {
       stroke: white;
@@ -30,30 +29,15 @@ const StyledSVGcontainer = styled.g`
     }
 `;
 
-
-export default function Mapa(props) {
-
-  const mouseOver = (e, region) => {
-    const hoverRegion = {
-      region: region.regionName,
-      infected: region.infected,
-      deceased: region.deceased,
-    }
-    props.onMouseEnter(e);
-    props.hoveredRegion(hoverRegion);
-    props.setMarkedRegion(region)
-  }
-
-  const mouseOut = (e, region) => {
-    props.onMouseLeave(e);
-    props.setMarkedRegion(region)
-  }
+export default function Map(props) {
 
   const map = props.regions.map(region => (
+
     <StyledSVGcontainer
       key={region.regionName}
-      onMouseOver={(e) => mouseOver(e, region)}
-      onMouseOut={(e) => mouseOut(e, region)}>
+      onMouseOver={() => props.setMarkedRegion(region.regionName)}
+      onMouseOut={() => props.setMarkedRegion(region.regionName)}
+    >
       <path
         id={region.regionName}
         d={region.d} />
@@ -61,16 +45,30 @@ export default function Mapa(props) {
         {region.infected}
       </text>
     </StyledSVGcontainer>
+
   ))
 
+  const popup = props.regions.map(region => (
+    region.isHovered ?
+      <div
+        className="popup"
+        onMouseOver={() => props.setMarkedRegion(region.regionName)}
+        style={{ left: region.mapPopupLeft, bottom: region.mapPopupBottom }}>
+        województwo: <span>{region.regionName}</span> <br />
+        zarazeni:<span>  {region.infected}</span><br />
+        ofiary śmietrtelne:<span> {region.deceased}</span>
+      </div>
+      : null
+
+  ))
   return (
-    <>
-      <svg viewBox="0 0 615 615" >
-        {map}
-      </svg>
-    </>
+    <div className="mapa">
+      <div className="mapContainer">
+        {props.isLoaded ? <svg viewBox="0 0 615 615" > {map}</svg>
+          : <i class="fas fa-virus"></i>}
+        {popup}
+      </div>
+
+    </div>
   )
-
 }
-
-

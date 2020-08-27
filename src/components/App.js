@@ -1,16 +1,17 @@
 import React from 'react';
-import '../styles/App.css';
-import { regionsLetterFormat } from '../assets/utility';
 import axios from 'axios';
-import Table from './Table';
-import MapContainer from './MapContainer';
-import regions from '../assets/svgData';
+import './App.css';
 import Header from './Header';
-
+import Table from './Table';
+import Map from './Map';
+import regions from '../assets/svgData'
+import { regionsLetterFormat } from '../assets/utility';
 
 class App extends React.Component {
+
   state = {
-    regions
+    regions,
+    isLoaded: false
   }
 
   componentDidMount() {
@@ -34,7 +35,10 @@ class App extends React.Component {
                 } else
                   return r;
               });
-            this.setState({ regions: states })
+            this.setState({
+              regions: states.sort((a, b) => b.infected - a.infected),
+              isLoaded: true
+            })
             return i;
           })
       })
@@ -43,11 +47,12 @@ class App extends React.Component {
       });
   }
 
+  // {props.regions.sort((a, b) => b.infected - a.infected)
 
-  handleMarkedRegion = (region) => {
+  handleMarkedRegion = (regionName) => {
     const regions = this.state.regions.map(r => {
 
-      if (r.regionName === region.regionName) {
+      if (r.regionName === regionName) {
         return {
           ...r,
           isHovered: !r.isHovered,
@@ -55,31 +60,28 @@ class App extends React.Component {
       }
       return r;
     })
-    this.setState({ regions })
-
+    this.setState({
+      regions
+    })
   }
 
 
   render() {
     return (
-      <>
+      <div className="App">
         <Header />
-        <div className="main">
-          <div className="map">
-            <MapContainer
-              regions={this.state.regions}
-              setMarkedRegion={this.handleMarkedRegion}
-            />
-          </div>
-          <div className="table">
-            <Table
-              regions={this.state.regions}
-            />
-          </div>
-        </div>
-      </>
+        <main className="main">
+          <Map
+            regions={this.state.regions}
+            setMarkedRegion={this.handleMarkedRegion}
+            isLoaded={this.state.isLoaded}
+          />
+          <Table regions={this.state.regions} />
+        </main>
+      </div>
     );
   }
+
 }
 
 export default App;
