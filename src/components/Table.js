@@ -4,9 +4,9 @@ export default function Table(props) {
 
   const table = props.regions.map(region => (
     <tr className={region.isHovered ? "select" : null}>
-      <td className="tdRegionName">{region.regionName}</td>
-      <td>{region.infected}</td>
-      <td>{region.deceased}</td>
+      <td colSpan="2" className="tdRegionName">{region.regionName}</td>
+      <td colSpan="1" >{region.infected}</td>
+      <td colSpan="1">{region.deceased}</td>
     </tr>
   ))
 
@@ -15,9 +15,18 @@ export default function Table(props) {
       <table>
         <thead>
           <tr>
-            <th>województwo</th>
-            <th>zarazeni</th>
-            <th>ofiary smiertelne</th>
+            <th colSpan="2">Łączna liczba przypadków</th>
+            <th colSpan="2">łaczna liczba zgonów</th>
+          </tr>
+          <tr className="summary">
+            <th colSpan="2">{props.infected}</th>
+            <th colSpan="2">{props.deceased}</th>
+          </tr>
+
+          <tr>
+            <th colSpan="2">lokalizacja</th>
+            <th colSpan="1">zarażeni</th>
+            <th colSpan="1">ofiary śmiertelne</th>
           </tr>
         </thead>
         <tbody>

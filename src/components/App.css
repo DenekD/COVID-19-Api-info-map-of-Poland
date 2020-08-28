@@ -113,9 +113,14 @@ body {
   text-align: center;
 }
 
-th {
+thead {
   background-color: #000;
   color: #fff;
+}
+
+.summary {
+  background: #c0d6df;
+  color: #133c4e;
 }
 
 .table td.tdRegionName {

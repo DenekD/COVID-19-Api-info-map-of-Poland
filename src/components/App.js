@@ -11,7 +11,9 @@ class App extends React.Component {
 
   state = {
     regions,
-    isLoaded: false
+    isLoaded: false,
+    infected: 0,
+    deceased: 0,
   }
 
   componentDidMount() {
@@ -21,6 +23,7 @@ class App extends React.Component {
   performSearch = () => {
     axios.get(`https://api.apify.com/v2/key-value-stores/3Po6TV7wTht4vIEid/records/LATEST?disableRedirect=true`)
       .then(response => {
+        this.setState({ infected: response.data.infected, deceased: response.data.deceased })
         response.data.infectedByRegion
           .map(i => {
             const states = this.state.regions
@@ -37,7 +40,8 @@ class App extends React.Component {
               });
             this.setState({
               regions: states.sort((a, b) => b.infected - a.infected),
-              isLoaded: true
+              isLoaded: true,
+
             })
             return i;
           })
@@ -46,8 +50,6 @@ class App extends React.Component {
         console.log('Error fetching and parsing data', error);
       });
   }
-
-  // {props.regions.sort((a, b) => b.infected - a.infected)
 
   handleMarkedRegion = (regionName) => {
     const regions = this.state.regions.map(r => {
@@ -76,7 +78,11 @@ class App extends React.Component {
             setMarkedRegion={this.handleMarkedRegion}
             isLoaded={this.state.isLoaded}
           />
-          <Table regions={this.state.regions} />
+          <Table
+            regions={this.state.regions}
+            infected={this.state.infected}
+            deceased={this.state.deceased}
+          />
         </main>
       </div>
     );
