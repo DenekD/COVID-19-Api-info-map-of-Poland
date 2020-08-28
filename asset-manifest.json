@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/COVID-19-Api-info-map-of-Poland/static/css/main.1aae1578.chunk.css",
-    "main.js": "/COVID-19-Api-info-map-of-Poland/static/js/main.e21c6d4d.chunk.js",
-    "main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/main.e21c6d4d.chunk.js.map",
+    "main.css": "/COVID-19-Api-info-map-of-Poland/static/css/main.f807b576.chunk.css",
+    "main.js": "/COVID-19-Api-info-map-of-Poland/static/js/main.996d3b3c.chunk.js",
+    "main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/main.996d3b3c.chunk.js.map",
     "runtime-main.js": "/COVID-19-Api-info-map-of-Poland/static/js/runtime-main.e500eac6.js",
     "runtime-main.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/runtime-main.e500eac6.js.map",
     "static/js/2.981f0883.chunk.js": "/COVID-19-Api-info-map-of-Poland/static/js/2.981f0883.chunk.js",
     "static/js/2.981f0883.chunk.js.map": "/COVID-19-Api-info-map-of-Poland/static/js/2.981f0883.chunk.js.map",
     "index.html": "/COVID-19-Api-info-map-of-Poland/index.html",
-    "precache-manifest.377c9f8e8f38b12230743256aa495c1a.js": "/COVID-19-Api-info-map-of-Poland/precache-manifest.377c9f8e8f38b12230743256aa495c1a.js",
+    "precache-manifest.dfd2522feebfe454834dae2575f9f679.js": "/COVID-19-Api-info-map-of-Poland/precache-manifest.dfd2522feebfe454834dae2575f9f679.js",
     "service-worker.js": "/COVID-19-Api-info-map-of-Poland/service-worker.js",
-    "static/css/main.1aae1578.chunk.css.map": "/COVID-19-Api-info-map-of-Poland/static/css/main.1aae1578.chunk.css.map",
+    "static/css/main.f807b576.chunk.css.map": "/COVID-19-Api-info-map-of-Poland/static/css/main.f807b576.chunk.css.map",
     "static/js/2.981f0883.chunk.js.LICENSE.txt": "/COVID-19-Api-info-map-of-Poland/static/js/2.981f0883.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e500eac6.js",
     "static/js/2.981f0883.chunk.js",
-    "static/css/main.1aae1578.chunk.css",
-    "static/js/main.e21c6d4d.chunk.js"
+    "static/css/main.f807b576.chunk.css",
+    "static/js/main.996d3b3c.chunk.js"
   ]
 }
