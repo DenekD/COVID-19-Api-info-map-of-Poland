@@ -13,6 +13,12 @@ body {
   height: 100vh;
 }
 
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
 .header {
   background: #277da1;
   flex-basis: 10%;
@@ -23,14 +29,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20vh;
 }
 
-.main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-
+.header i {
+  position: absolute;
+  font-size: 40px;
+  top: 20px;
+  left: 20px;
 }
+
 
 /* ------------------------------------------- */
 /* ------------------- MAP ------------------- */
@@ -116,6 +124,7 @@ body {
 thead {
   background-color: #000;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .summary {
@@ -145,7 +154,7 @@ thead {
 }
 
 .table tr {
-  transition: top 1s ease-out;
+  transition: all .2s ease-out;
 }
 
 .table tr.select {
@@ -156,7 +165,62 @@ thead {
 
 }
 
+/* ------------------------------------------- */
+/* --------------- ASIDE --------------------- */
+/* ------------------------------------------- */
 
+.aside {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #277da1;
+  z-index: 10;
+  transition: left .2s ease-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 20vh 0 ;
+  flex-wrap: wrap;
+
+}
+
+aside a {
+  text-align: center;
+  display: block;
+  flex-basis: 25%;
+}
+
+.aside i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.aside.open {
+  left: 0px;
+}
+
+.aside.closed {
+  left: -300px;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.backdrop.open {
+  display: block;
+}
+
+.backdrop.closed {
+  display: none;
+}
 
 @media (max-width: 840px) {
   .main {
@@ -171,6 +235,7 @@ thead {
 @media (max-width: 540px) {
   .header {
     font-size: 18px;
-    padding: 0 10px;
+    padding-left: 20vw;
+    padding-right: 0;
   }
 }

@@ -4,8 +4,10 @@ import './App.css';
 import Header from './Header';
 import Table from './Table';
 import Map from './Map';
+import Aside from './Aside';
 import regions from '../assets/svgData'
 import { regionsLetterFormat } from '../assets/utility';
+import Backdrop from './Backdrop';
 
 class App extends React.Component {
 
@@ -14,6 +16,7 @@ class App extends React.Component {
     isLoaded: false,
     infected: 0,
     deceased: 0,
+    isAsideShow: false,
   }
 
   componentDidMount() {
@@ -67,11 +70,15 @@ class App extends React.Component {
     })
   }
 
+  handleToggleAside = () => {
+    this.setState((prevState => ({ isAsideShow: !prevState.isAsideShow })))
+  }
+
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header toggleAside={this.handleToggleAside} />
         <main className="main">
           <Map
             regions={this.state.regions}
@@ -84,6 +91,11 @@ class App extends React.Component {
             deceased={this.state.deceased}
           />
         </main>
+        <Aside show={this.state.isAsideShow} />
+        <Backdrop
+          show={this.state.isAsideShow}
+          toggleAside={this.handleToggleAside}
+        />
       </div>
     );
   }

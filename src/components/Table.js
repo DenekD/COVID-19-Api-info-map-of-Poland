@@ -6,7 +6,11 @@ export default function Table(props) {
     <tr className={region.isHovered ? "select" : null}>
       <td colSpan="2" className="tdRegionName">{region.regionName}</td>
       <td colSpan="1" >{region.infected}</td>
+      {/* percentage value */}
+      {/* <td colSpan="1">({(region.infected * 100 / props.infected).toFixed(2)}%)</td> */}
       <td colSpan="1">{region.deceased}</td>
+      {/* percentage value */}
+      {/* <td colSpan="1">({(region.deceased * 100 / props.deceased).toFixed(2)}%)</td> */}
     </tr>
   ))
 
