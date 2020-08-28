@@ -15,7 +15,6 @@ body {
 
 .header {
   background: #277da1;
-  /* padding: 20px; */
   flex-basis: 10%;
   min-height: 75px;
   color:#fff;
@@ -32,6 +31,11 @@ body {
   flex-direction: row;
 
 }
+
+/* ------------------------------------------- */
+/* ------------------- MAP ------------------- */
+/* ------------------------------------------- */
+
 .mapa {
   min-height: 300px;
   background: #fff;
@@ -64,6 +68,10 @@ body {
   100% {transform: rotate(360deg)}
 }
 
+/* ------------------------------------------- */
+/* ----------------- POPUP ------------------- */
+/* ------------------------------------------- */
+
 
 .popup {
   position: absolute;
@@ -90,12 +98,14 @@ body {
 .popup span {
   color: blue;
 }
+/* ------------------------------------------- */
+/* --------------- TABLE --------------------- */
+/* ------------------------------------------- */
 
 .table table{
   border-collapse: collapse;
-  color: #0b132b;
+  color: #133c4e;
   height: 100%;
-
 }
 
 .table td, .table th {
@@ -111,8 +121,6 @@ th {
 .table td.tdRegionName {
   text-align: left;
 }
-
-
 
 .table tbody tr:nth-child(even) {
   background: #c0d6df;
@@ -131,18 +139,33 @@ th {
   background: #ec7505;
 }
 
-.table tr.select {
-  background: #09a6f3 !important;
-  color: #fff;
+.table tr {
+  transition: top 1s ease-out;
 }
+
+.table tr.select {
+  background: #277da1 !important;
+  color: #fff;
+  outline: 3px black solid;
+  outline-offset: -3px;
+
+}
+
+
 
 @media (max-width: 840px) {
   .main {
     flex-direction: column;
-
   }
 
   .table table {
     width: 100%
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    font-size: 18px;
+    padding: 0 10px;
   }
 }

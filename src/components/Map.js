@@ -16,7 +16,7 @@ const StyledSVGcontainer = styled.g`
     fill: #ec7505;
     }
     &:hover {
-      fill: #09a6f3;
+      fill: #277da1;
     }
     & path {
       stroke: white;
